@@ -7,4 +7,38 @@ block scripts
   script(src='about.bundle.js')
 
 block content
-  h1 Страничка "Обо Мне"  
+  section.hero  
+    .hero__links
+      ul.socials
+        each item in ['vk', 'git', 'in']
+          a(href="#").socials__link
+            +icon(item, 'socials__link-icon')
+    .hero__menu
+      a(href="#").hamburger
+    .hero__title
+      .section__img 
+        img(src="", alt="").section__img-pic
+      .user
+        .user__pic
+          img(src="", alt="").user__pic-img
+        .user__title
+          h2.user__name Вадим Брусинский
+          span.user_discription Личный сайт веб разработчика
+    .hero__arrow
+      a(href="#").arrow__down
+  section.about
+    .aboutme
+      h2.section__title.aboutme__title обо мне
+      .aboutme__info
+        .aboutme__img
+          img(src="", alt="").aboutme__img-pic
+        .aboutme.content
+          h3.aboutme__who кто я
+          .aboutme__disc Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
+    .skills
+      h2.section__title чем я могу быть вам полезен
+      p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачина Backend. Но давайте по порядку.
+      .myskills
+        ul.skills__list
+          each item in ['Frontend', 'Backend', 'WorkFlow']
+            +icon(item, 'skills__icon')

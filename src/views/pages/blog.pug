@@ -1,0 +1,34 @@
+extends ../main.layout.pug
+
+block variables
+  - var title = 'Блог'
+
+
+block scripts
+  script(src='about.bundle.js')
+
+block content
+   section.hero  
+    -
+      var socials = [
+        ['vk', 'http://vk.com'],
+        ['gh', 'http://gh.com'],
+        ['in', 'http://in.com']
+      ]
+    ul.socials.hero__links
+      each item in socials
+        a(href="#").socials__link
+          +icon(item, 'socials__link-icon')
+    .hero__menu
+      a(href="#").hamburger
+    .hero__title
+      .section__img 
+        img(src="", alt="").section__img-pic
+      .user
+        .user__pic
+          img(src="", alt="").user__pic-img
+        .user__title
+          h2.user__name Блог
+          span.user_discription Статьи, которые я написал
+    .hero__arrow
+      a(href="#").arrow__down

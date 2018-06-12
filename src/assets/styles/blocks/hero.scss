@@ -1,0 +1,23 @@
+.hero {
+background: url('../assets/images/hero/background.jpg') center center / cover no-repeat;
+width: 100%;
+display: flex;
+position: relative;
+}
+
+.hero-about {
+  height: 880px;
+}
+
+.arrow__down {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: svg-load('arrow_down.svg', fill=$white) center center no-repeat;
+  width: 26px;
+  height: 16px;
+  cursor: pointer;
+  display: block;
+}
+

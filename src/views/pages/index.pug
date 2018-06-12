@@ -1,6 +1,35 @@
 extends ../auth.layout.pug
 
 block content
-  .hello-world
-    +icon('check', 'hello-world__block')
-    .inlined-svg
+  section.welcome
+    .welcome__block
+      .user
+        .user__pic
+          img(src="../../assets/images/hero/ava.jpg", alt="avatar").user__pic-img
+        .user__title
+          h2.user__name Вадим Брусинский
+          span.user_discription Личный сайт веб разработчика
+      -
+        var socials = [
+          ['vk', 'http://vk.com'],
+          ['gh', 'http://gh.com'],
+          ['in', 'http://in.com']
+        ]
+      ul.socials.welcome__links
+        each item in socials
+          a(href="#").socials__link
+            +icon(item, 'socials__link-icon socials__link-icon--' +item[0])
+      
+      -
+        var welcome = [
+          ['Мои работы'],
+          ['обо мне'],
+          ['блог']
+        ]
+      ul.welcome__list
+        each item in welcome
+          a(href="#").welcome__item 
+            .welcome__text #{item}
+
+    .welcome_button
+      button.welcome__button-btn Авторизироваться

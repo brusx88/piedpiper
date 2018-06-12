@@ -9,14 +9,14 @@ footer.footer
           li.menu__item
             a(href="#").menu__link #{item}
       .footer__social
-        ul.socials.socials--around
-          each item in ['vk', 'git', 'in']
+        ul.socials.socials__footer
+          each item in socials
             a(href="#").socials__link
-              +icon(item, 'socials__link-icon')
+              +icon(item, 'socials__link-icon socials__link-icon--' +item[0])
   .footer__col.footer__col--justify-right
     address.footer__contacts
-      each item in ['vadimbrus', '[brusinskij13@gmail.com]', '+7 937 081 48 83', 'Волгоград']
+      each item in ['vadimbrus', 'brusinskij13@gmail.com', '+7 937 081 48 83', 'Волгоград']
         a(href="#").footer__contacts-hero__links #{item}
 
-
-  h2 Copyright &copy;
+.Copyright
+  h2.myname Вадим Брусинский | Создано с любовью в loftSchool &copy;

@@ -1,0 +1,76 @@
+.contacts {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color:  rgba(255, 255, 255, 0.7);
+  width: 580px;
+  height: 283px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-top: 37px;
+}
+
+.contacts__title {
+  font-family: 'sansus_regular';
+  font-size: 35px;
+  color:  #474b57;
+  margin: 0 auto;
+  position: relative;
+  height: 80px;
+
+  &:after {
+    content: '';
+    display: inline-block;
+    border-bottom: solid 3px rgba(71, 75, 87, 0.5);
+    width: 89px;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translatex(-50%)
+  }
+}
+
+.contacts__row {
+  font-family: 'Roboto';
+  color:  #474b57;
+  font-size: 16px;
+  font-weight: 500;
+  display: inline-block;
+  }
+
+.contacts__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding-left: 19px;
+}
+
+.contacts__item {
+  display: flex;
+  margin-right: 152px;
+  width: 200px;
+  margin-bottom: 30px;
+  align-items: center;
+
+  &:nth-child(2n){
+    margin-right: 0;
+  }
+}
+
+.contacts__icon-img {
+  width: 45px;
+  height: 45px;
+  background: svg-load('skype_n.svg', fill=#004cd1) center center no-repeat;
+  cursor: pointer;
+  margin-right: 9px;
+
+  &--number {
+    background: svg-load('phone_n.svg', fill=#004cd1) center center no-repeat;
+  }
+
+  &--myaddress {
+    background: svg-load('map_n.svg', fill=#004cd1) center center no-repeat;
+  }
+}
